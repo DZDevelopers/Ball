@@ -7,9 +7,10 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     vec2 uv = fragCoord / iResolution.xy;
     float x = 0.0f;
     float y = 0.0f;
+    
     while (x < 100.0) { 
-        x = x + 1.0f;
-        y = y + 1.0f;
+        x = x - 1.0f;
+        y = y - 1.0f;
     }
 
     // A colour that shifts over time.
