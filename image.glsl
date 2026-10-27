@@ -9,9 +9,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     float x,y = 0.0f;
     // A colour that shifts over time.
     vec3 col = x + y * cos(iTime + uv.xyx + vec3(0.0, 2.0, 4.0));
-    while ((x + y) => 10)
-    {
-
+    while (x + y <= 10) { 
+        
     }
 
     // A soft circle in the middle that follows the mouse while you hold a button.
