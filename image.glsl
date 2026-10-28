@@ -29,6 +29,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         w = 0.0f;
     }
     
+    i am writing random stuff just for the video lol hi 
     // A colour that shifts over time.
     vec3 col = x + y * sin(iTime + uv.xyx + vec3(0.0 + x, 2.0 - y, 4.0 + x - y));
     
