@@ -5,11 +5,12 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Pixel position, from 0 to 1 across the screen.
     vec2 uv = fragCoord / iResolution.xy;
-    float x = 2.0f;
+    float x = 1.0f;
     float y = 1.0f;
+    
 
     // A colour that shifts over time.
-    vec3 col = x + y * cos(iTime + uv.xyx + vec3(0.0, 2.0, 4.0));
+    vec3 col = x + y * cos(iTime + uv.xyx + vec3(0.0, 3.0, 7.0));
     
     
     // A soft circle in the middle that follows the mouse while you hold a button.
