@@ -8,12 +8,19 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Pixel position, from 0 to 1 across the screen.
     vec2 uv = fragCoord / iResolution.xy;
-    float w = 1.0f;
+    float w = 0.0f;
     float x = 1.0f;
     float y = 1.0f;
-    float z = 1.0f;
-    while ()
-    
+    float z = 0.0f;
+    while (w <= 0.9f)
+    {
+        w = w + 0.01f;
+    }
+    while (z <= 0.9f)
+    {
+        z = z + 0.01f;
+    }
+    if (z > )
     
     // A colour that shifts over time.
     vec3 col = x + y * sin(iTime + uv.xyx + vec3(0.0 + x, 2.0 - y, 4.0 + x - y));
