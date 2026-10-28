@@ -13,8 +13,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
 
     // A colour that shifts over time.
-    vec3 col = x + y * cos(iTime + uv.xyx + vec3(1.0, 3.0, 7.0));
-    
+    vec3 col = x + y * sin(iTime + uv.xyx + vec3(0.0, 3.0, 7.0));
     
     // A soft circle in the middle that follows the mouse while you hold a button.
     vec2 centre = iMouse.z > 0.0 ? iMouse.xy : 0.5 * iResolution.xy;
