@@ -1,6 +1,9 @@
 // Welcome! This is a Shadertoy-style shader.
 // mainImage runs once for each pixel, every frame.
 // Try changing a number, then watch the preview on the right.
+
+
+
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Pixel position, from 0 to 1 across the screen.
@@ -10,7 +13,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
 
     // A colour that shifts over time.
-    vec3 col = x + y * cos(iTime + uv.xyx + vec3(0.0, 3.0, 7.0));
+    vec3 col = x + y * cos(iTime + uv.xyx + vec3(1.0, 3.0, 7.0));
     
     
     // A soft circle in the middle that follows the mouse while you hold a button.
