@@ -12,15 +12,22 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     float x = 1.0f;
     float y = 1.0f;
     float z = 0.0f;
-    while (w <= 0.9f)
+    while (w <= 0.99f)
     {
         w = w + 0.01f;
     }
-    while (z <= 0.9f)
+    while (z <= 0.99f)
     {
         z = z + 0.01f;
     }
-    if (z > )
+    if (z > 0.99f)
+    {
+        z = 0.0f;
+    }
+    if (w > 0.99f)
+    {
+        w = 0.0f;
+    }
     
     // A colour that shifts over time.
     vec3 col = x + y * sin(iTime + uv.xyx + vec3(0.0 + x, 2.0 - y, 4.0 + x - y));
@@ -28,7 +35,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     // A soft circle in the middle that follows the mouse while you hold a button.
     vec2 centre = iMouse.z > 0.0 ? iMouse.xy : 0.5 * iResolution.xy;
     float d = length(fragCoord - centre) / iResolution.y;
-    col *= smoothstep(0.25 + z, 0.4 - w, d) * 0.5 + 0.5;
+    col *= smoothstep(0.25 + z, 0.35 - w, d) * 0.5 + 0.5;
 
     fragColor = vec4(col, 1.0);
 }
